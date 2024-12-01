@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="multidownload.js"></script>
+    <script src="filemanip.js"></script>
+    <script src="UIupdate.js"></script>
+    <style>
+      .hide {
+        display: none;
+      }
+      </style>
+  </head>
+  <body>
+    <h2>Demo JavaScript</h2>
+    <form>
+      <div style="display: none;" id="savedline" value="" ></div>
+      <div style="display: none;" id="saveddirectory" value="" ></div>
+      <div>examples:</div>
+        https://visuallibrary.net/download/format/list/ftpack_plain/513037
+      </div>
+      <div
+        >https://visuallibrary.net/download/format/list/ftpack_plain/436884</div
+      >
+      <label>Add URL</label>
+      <input type="url" id="url" />
+      <input type="button" onclick="download()" value="Download" />
+      <br></br>
+      <div id="action"></div>
+      <label for="progressbar" class="hide">Downloading progress:</label>
+      <progress id="progressbar" value="" max="" class="hide"></progress>
+      <span id="filesize" class="hide">% size of file downloading</span>
+      <input type="button" value="Pause" id="pause" class="hide">
+      <input type="button" value="Resume" id="resume" disabled onclick="download()" class="hide">
+      <input type="button" value="Stop" id="stop" class="hide">
+      <div id="filecount" class="hide">downloaded files % out of %</div>
+      <br></br>
+      <textarea id="editarea" rows="8" cols="100">
+        Editing a file
+        </textarea>
+        <input type="button" onclick="editor()" value="Edit" />
+        <input type="button" onclick="save()" value="Save" />
+        <input type="button" onclick="saveAs()" value="Save as" />
+    </form>
+  </body>
+  <input type="button" id = "mode" onclick="" value="Detailed Mode" />
+  <textarea style="display: none;" id="detailsarea"  rows="8" cols="100" readonly></textarea>
+</html>
